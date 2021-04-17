@@ -33,7 +33,7 @@ def won?(board)
      return win_combination
    elsif position_1 == " " && position_2 == " " && position_3 == " "
       return false
-    end
+   end
  end
  end
 
@@ -41,13 +41,6 @@ def won?(board)
 
  
     
-
-
-
-
-
-
-
 
 def full?(board)
   board.all? {|element| element == "X" || element = "O"}
