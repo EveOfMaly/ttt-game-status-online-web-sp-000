@@ -37,7 +37,11 @@ end
 
 
 def full?(board)
-  board.all? {|element| element == "X" || element = "O"}
+ if board.any? {|index| index == nil || index == " "}
+    return false
+  else
+    return true
+  end
 end 
 
 def draw?(board)
@@ -63,6 +67,8 @@ def winner(board)
       return board[won?(board)[0]]
   end
 end 
+
+
   
   
   
